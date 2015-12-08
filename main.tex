@@ -163,7 +163,7 @@ The CCLTracker framework has been implemented under the EU project Citizen Cyber
 CCLTracker framework has been implemented in the following pilots:
 
 \begin{itemize}
-\item \textbf{CERN Volunteer Computing Challenge}\footnote{https://test4theory.cern.ch/challenge/} is  web site running periodic public computing challenges. Volunteers help CERN scientists simulate particle collisions in accelerators like the Large Hadron Collider (LHC), using their own computers.
+\item \textbf{CERN Volunteer Computing Challenge}\footnote{https://test4theory.cern.ch/challenge/} is  web site running periodic public volunteer computing challenges. Volunteers help CERN scientists simulate particle collisions in accelerators like the Large Hadron Collider (LHC), using their own computers. Namely, there were two event CERN 60 public computing challenge in 2014 and CERN Public Computing Challenge in 2015. 
 
 \item \textbf{GeoTag-X}\footnote{www.geotagx.org/} is a website focuses on crowdsource photo analysis for humanitarian disaster response.
 
@@ -171,10 +171,10 @@ CCLTracker framework has been implemented in the following pilots:
 \end{itemize}
 
 
-The CCLTracker Framework has been integrated in these applications in order to understand the users behaviour, measuring engagement, and users' learning. 
+The CCLTracker Framework has been integrated in these applications in order to understand the users behaviour, measuring engagement and users' learning. 
 
 
-\subsection{CERN 60 public computing challenge}
+\subsection{CERN Volunteer Computing Challenges}
 
 The CERN 60 Challenge was a 12-days event that run during the last days of December 2014 (9-20 Dec.). The purpose of the challenge was to test the experimental CernVM WebAPI technology and to understand the user behaviours in volunteering computing projects.
 
@@ -210,7 +210,7 @@ Related to user actions
 
 The events fired to the DOM window are always prefixed with the ‘analytics.’ prefix.
 
-\subsubsubsection{CernVM WebAPI Events}
+\subsubsection{CernVM WebAPI Events}
 
 Most of the CernVM WebAPI events are fired when the state of the internal finite-state-machine is changed. For reference, the following abstract diagram illustrates the different states in the internal FSM and the possible transitions between them:
 
@@ -250,7 +250,7 @@ In addition, two special events are fired providing a higher-level information r
 \end{itemize}
 
 
-\subsubsubsubsection{Sequence of events}
+\subsubsection{Sequence of events}
 
 Since all these events are produced by the state changes of the FSM, they can only appear in sequences. The usual flow of events is shown on the following diagram:
 
@@ -273,7 +273,7 @@ Therefore, you can extract some useful information:
 \end{itemize}
 
 
-\subsubsubsection{User Events}
+\subsubsection{User Events}
 
 These events are fired by user actions on the user interface. These are:
 
@@ -290,7 +290,7 @@ actions.remove: User clicked on the trash icon which is going to remove the virt
 \end{itemize}
 
 
-\subsubsubsubsection{Sequence of events with WebAPI}
+\subsubsection{Sequence of events with WebAPI}
 
 Most of the events fired by the WebAPI are triggered by the user. The following table shows which WebAPI events can a user event trigger. The events not included in the following table are not causing changes to the Virtual Machine.
 
@@ -307,7 +307,7 @@ If you notice a sequence of events not matching the ones below, then the state c
 
 
 
-\subsubsubsection{Other user actions that could trigger WebAPI events}
+\subsubsection{Other user actions that could trigger WebAPI events}
 
 Since the user can still control the Virtual Machine without the Challenge Interface (ex. through VirtualBox), a state change can occur without a user-triggered action.
 
