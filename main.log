@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.8)  8 DEC 2015 14:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.8)  8 DEC 2015 14:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -279,34 +279,36 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(./main.aux)
+(./subfigure.sty
+\c@subfigure=\count89
+) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 
 (/usr/local/texlive/2015basic/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count89
+\scratchcounter=\count90
 \scratchdimen=\dimen105
 \scratchbox=\box26
-\nofMPsegments=\count90
-\nofMParguments=\count91
+\nofMPsegments=\count91
+\nofMParguments=\count92
 \everyMPshowfont=\toks17
-\MPscratchCnt=\count92
+\MPscratchCnt=\count93
 \MPscratchDim=\dimen106
-\MPnumerator=\count93
-\makeMPintoPDFobject=\count94
+\MPnumerator=\count94
+\makeMPintoPDFobject=\count95
 \everyMPtoPDFconversion=\toks18
 ) (/usr/local/texlive/2015basic/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -356,157 +358,124 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 14.
+(Font)              <12> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 14.
+(Font)              <8> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 14.
+(Font)              <6> on input line 15.
 
-Overfull \hbox (52.99326pt too wide) in paragraph at lines 14--14
+Overfull \hbox (52.99326pt too wide) in paragraph at lines 15--15
  [][] 
  []
 
 [1
 
 {/usr/local/texlive/2015basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 49.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 50.
 
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 49.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
 
 
-LaTeX Warning: Reference `sec:related' on page 2 undefined on input line 57.
+LaTeX Warning: Reference `CCLTracker' on page 2 undefined on input line 58.
 
 
-LaTeX Warning: Reference `CCLTracker' on page 2 undefined on input line 57.
-
-
-LaTeX Warning: Reference `sec:caseStudy' on page 2 undefined on input line 57.
+LaTeX Warning: Reference `sec:caseStudy' on page 2 undefined on input line 58.
 
 [2] [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 90.
+(Font)              <7> on input line 91.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 90.
- [4]
-
-LaTeX Warning: Reference `sec:CCLtrackerFramerwork' on page 5 undefined on inpu
-t line 103.
-
-
-LaTeX Warning: Reference `sec:CCLtrackerFramerwork' on page 5 undefined on inpu
-t line 103.
-
-[5] <imgs/ccltrackerFramework.pdf, id=29, 569.12625pt x 256.96pt>
+(Font)              <5> on input line 91.
+ [4] [5] <imgs/ccltrackerFramework.pdf, id=29, 569.12625pt x 256.96pt>
 File: imgs/ccltrackerFramework.pdf Graphic file (type pdf)
 
 <use imgs/ccltrackerFramework.pdf>
-Package pdftex.def Info: imgs/ccltrackerFramework.pdf used on input line 145.
+Package pdftex.def Info: imgs/ccltrackerFramework.pdf used on input line 146.
 (pdftex.def)             Requested size: 312.9803pt x 141.31667pt.
+ [6 <./imgs/ccltrackerFramework.pdf>]
+[7] <imgs/gender-nojobs.png, id=59, 369.38pt x 402.50375pt>
+File: imgs/gender-nojobs.png Graphic file (type png)
 
+<use imgs/gender-nojobs.png>
+Package pdftex.def Info: imgs/gender-nojobs.png used on input line 389.
+(pdftex.def)             Requested size: 124.20021pt x 135.3386pt.
 
-LaTeX Warning: Reference `img:CCLTrackerFrameworkComponents' on page 6 undefine
-d on input line 151.
+<imgs/gender-1job.png, id=61, 343.2825pt x 391.4625pt>
+File: imgs/gender-1job.png Graphic file (type png)
 
-[6 <./imgs/ccltrackerFramework.pdf>]
-<imgs/CERN60Events.pdf, id=55, 513.58856pt x 225.5898pt>
-File: imgs/CERN60Events.pdf Graphic file (type pdf)
+<use imgs/gender-1job.png>
+Package pdftex.def Info: imgs/gender-1job.png used on input line 392.
+(pdftex.def)             Requested size: 117.29874pt x 133.75851pt.
 
-<use imgs/CERN60Events.pdf>
-Package pdftex.def Info: imgs/CERN60Events.pdf used on input line 190.
-(pdftex.def)             Requested size: 345.0pt x 151.54367pt.
- [7]
-<imgs/webAPIEvents.pdf, id=60, 525.61316pt x 168.3339pt>
-File: imgs/webAPIEvents.pdf Graphic file (type pdf)
+<imgs/gender-10jobs.png, id=62, 343.2825pt x 391.4625pt>
+File: imgs/gender-10jobs.png Graphic file (type png)
 
-<use imgs/webAPIEvents.pdf>
-Package pdftex.def Info: imgs/webAPIEvents.pdf used on input line 221.
-(pdftex.def)             Requested size: 345.0pt x 110.49196pt.
- [8 <./imgs/CERN60Events.pdf>] [9 <./imgs/webAPIEvents.pdf>] <imgs/sequenceOfEv
-entsTable.png, id=97, 586.19pt x 240.9pt>
-File: imgs/sequenceOfEventsTable.png Graphic file (type png)
+<use imgs/gender-10jobs.png>
+Package pdftex.def Info: imgs/gender-10jobs.png used on input line 395.
+(pdftex.def)             Requested size: 117.29874pt x 133.75851pt.
 
-<use imgs/sequenceOfEventsTable.png>
-Package pdftex.def Info: imgs/sequenceOfEventsTable.png used on input line 259.
+<imgs/gender-100jobs.png, id=63, 343.2825pt x 391.4625pt>
+File: imgs/gender-100jobs.png Graphic file (type png)
 
-(pdftex.def)             Requested size: 345.0pt x 141.78055pt.
- [10 <./imgs/sequenceOfEventsTable.png>]
-<imgs/webAPIEventsSequenceTable.png, id=101, 585.18625pt x 307.1475pt>
-File: imgs/webAPIEventsSequenceTable.png Graphic file (type png)
+<use imgs/gender-100jobs.png>
+Package pdftex.def Info: imgs/gender-100jobs.png used on input line 398.
+(pdftex.def)             Requested size: 117.29874pt x 133.75851pt.
 
-<use imgs/webAPIEventsSequenceTable.png>
-Package pdftex.def Info: imgs/webAPIEventsSequenceTable.png used on input line 
-302.
-(pdftex.def)             Requested size: 345.0pt x 181.08891pt.
-
-<imgs/userActions-webAPIEventsTable.png, id=102, 582.175pt x 360.34625pt>
-File: imgs/userActions-webAPIEventsTable.png Graphic file (type png)
-
-<use imgs/userActions-webAPIEventsTable.png>
-Package pdftex.def Info: imgs/userActions-webAPIEventsTable.png used on input l
-ine 317.
-(pdftex.def)             Requested size: 345.0pt x 213.54817pt.
- [11 <./imgs/webAPIEventsSequenceTable.png>]
-
-LaTeX Warning: Reference `img:Sessions versus sessions running the VM' on page 
-12 undefined on input line 352.
-
-<imgs/sessionVSsessionVMRunning.png, id=106, 1187.43625pt x 188.705pt>
+<imgs/sessionVSsessionVMRunning.png, id=64, 1187.43625pt x 188.705pt>
 File: imgs/sessionVSsessionVMRunning.png Graphic file (type png)
 
 <use imgs/sessionVSsessionVMRunning.png>
 Package pdftex.def Info: imgs/sessionVSsessionVMRunning.png used on input line 
-361.
+410.
 (pdftex.def)             Requested size: 426.79134pt x 67.82433pt.
 
-Overfull \hbox (81.79134pt too wide) in paragraph at lines 361--362
+Overfull \hbox (81.79134pt too wide) in paragraph at lines 410--411
  [] 
  []
 
-<imgs/sourceMediumVMRunning.png, id=107, 522.95375pt x 495.8525pt>
+<imgs/sourceMediumVMRunning.png, id=65, 522.95375pt x 495.8525pt>
 File: imgs/sourceMediumVMRunning.png Graphic file (type png)
 
 <use imgs/sourceMediumVMRunning.png>
-Package pdftex.def Info: imgs/sourceMediumVMRunning.png used on input line 375.
+Package pdftex.def Info: imgs/sourceMediumVMRunning.png used on input line 424.
 
 (pdftex.def)             Requested size: 345.0pt x 327.12747pt.
 
-<imgs/Engagement.png, id=108, 363.2772pt x 218.7372pt>
+<imgs/Engagement.png, id=66, 363.2772pt x 218.7372pt>
 File: imgs/Engagement.png Graphic file (type png)
 
 <use imgs/Engagement.png>
-Package pdftex.def Info: imgs/Engagement.png used on input line 386.
+Package pdftex.def Info: imgs/Engagement.png used on input line 435.
 (pdftex.def)             Requested size: 345.0pt x 207.74574pt.
 
-<imgs/Engagement2.png, id=110, 391.4625pt x 461.725pt>
+<imgs/Engagement2.png, id=67, 391.4625pt x 461.725pt>
 File: imgs/Engagement2.png Graphic file (type png)
 
 <use imgs/Engagement2.png>
-Package pdftex.def Info: imgs/Engagement2.png used on input line 395.
+Package pdftex.def Info: imgs/Engagement2.png used on input line 444.
 (pdftex.def)             Requested size: 345.0pt x 406.94629pt.
- [12 <./imgs/userActions-webAPIEventsTable.png> <./imgs/sessionVSsessionVMRunni
-ng.png>]
+
 No file main.bbl.
-[13 <./imgs/sourceMediumVMRunning.png>] [14 <./imgs/Engagement.png>] [15 <./img
+[8] [9 <./imgs/gender-nojobs.png> <./imgs/gender-1job.png> <./imgs/gender-10job
+s.png> <./imgs/gender-100jobs.png> <./imgs/sessionVSsessionVMRunning.png>]
+[10 <./imgs/sourceMediumVMRunning.png>] [11 <./imgs/Engagement.png>] [12 <./img
 s/Engagement2.png>] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 2113 strings out of 494501
- 29690 string characters out of 6167030
- 88226 words of memory out of 5000000
- 5367 multiletter control sequences out of 15000+600000
- 8848 words of font info for 31 fonts, out of 8000000 for 9000
+ 2121 strings out of 494501
+ 29573 string characters out of 6167030
+ 88490 words of memory out of 5000000
+ 5374 multiletter control sequences out of 15000+600000
+ 8502 words of font info for 30 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 37i,8n,23p,1801b,259s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,8n,23p,1801b,270s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
 0.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/
@@ -518,12 +487,11 @@ ic/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015basic/texmf-dist/font
-s/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (15 pages, 580557 bytes).
+pe1/public/amsfonts/cm/cmsy10.pfb>
+Output written on main.pdf (12 pages, 363315 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
+ 125 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

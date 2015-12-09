@@ -8,6 +8,7 @@
 
 \usepackage{natbib}
 \usepackage{graphicx}
+\usepackage{subfigure}
 
 \begin{document}
 
@@ -158,12 +159,12 @@ Figure~\ref{img:CCLTrackerFrameworkComponents} shows the interaction between the
 
 This section summarises the main applications where the CCLTracker framework has been used and show data examples. 
 
-The CCLTracker framework has been implemented under the EU project Citizen CyberLab. The main goal was to evaluate the different pilots developed during the project, evaluate the engagement, dissemination actions, and evaluate learning aspect of the pilots.
+The CCLTracker framework has been implemented under the EU project Citizen CyberLab. The main goal was to evaluate the different pilots developed during the project, evaluate the engagement, dissemination actions, and evaluate users learning outcomes.
 
 CCLTracker framework has been implemented in the following pilots:
 
 \begin{itemize}
-\item \textbf{CERN Volunteer Computing Challenge}\footnote{https://test4theory.cern.ch/challenge/} is  web site running periodic public volunteer computing challenges. Volunteers help CERN scientists simulate particle collisions in accelerators like the Large Hadron Collider (LHC), using their own computers. Namely, there were two event CERN 60 public computing challenge in 2014 and CERN Public Computing Challenge in 2015. 
+\item \textbf{CERN Volunteer Computing Challenge}\footnote{https://test4theory.cern.ch/challenge/} is  web site running periodic public volunteer computing challenges. Volunteers help CERN scientists simulate particle collisions in accelerators like the Large Hadron Collider (LHC), using their own computers. 
 
 \item \textbf{GeoTag-X}\footnote{www.geotagx.org/} is a website focuses on crowdsource photo analysis for humanitarian disaster response.
 
@@ -176,184 +177,232 @@ The CCLTracker Framework has been integrated in these applications in order to u
 
 \subsection{CERN Volunteer Computing Challenges}
 
-The CERN 60 Challenge was a 12-days event that run during the last days of December 2014 (9-20 Dec.). The purpose of the challenge was to test the experimental CernVM WebAPI technology and to understand the user behaviours in volunteering computing projects.
+CERN volunteer computing challenges is a periodic volunteer computing event. The CCLTracker framework has been used in two of those events. Namely, at the CERN 60 Challenges, 12-days event that run during the last days of December 2014 (9-20 Dec.), and the CERN Public Computing Challenge 2015 that run from 1st Nov to 1st Dic 2015. The purpose of these challenges were to test the experimental CernVM WebAPI technology and to understand users behaviour and interest behind volunteer computing project. Analytics information gathered from CCLTracker is used for measuring engagement, evaluate the user interface and for evaluating the CERN VM Technology. 
 
-\subsubsection{Event forwarding specifications}
+Basically, the events monitored by the CCLTracker framework are clissified into 3 groups:
 
-We are using Google Analytics for handing the analytics events, which is delivered through Google Tag Manager. The latter offers the ability to dynamically inject additional tracking logic at a later time. However due to the complexity of the processes involved, it’s frequently not easy to identify the events of interest from an external library. For instance, it might be easy to track clicks on the “Start” button, but it’s not easy to understand if this action really started the Virtual Machine.
+\textbf{Users actions} contains all events related with user actions on the challenge website such as clicking external links, start button,  stop button, or changing the  virtual machine settings (i.e. number of cores and memory the user is donating). 
 
-Therefore we need to have a higher-level information that should come directly from the application. In order to accommodate future changes in the way the analytics data are processed, we agreed on an interface between the application developer and the analytics experts. 
+\textbf{Users goals}: are used to monitor user achievements over the participation on the challenge. Some examples are CPU time donated, number of jobs computed, or how many times an user starts the VM. Goals are pre-aggregated before firing the event. This has two main advantages: (1) it easy the data analysis and (2) it allows to extract demographic data for different user segments based on participation (e.g. gender of users who has contribute more than 100 jobs, or interest of user who visit the website but didn't start contributing). 
 
+\textbf{VM status}: contains all event related with the status of the virtual machine such as available, paused, running, stopped, or booted. Additionally, all erros are also reported as events. Reporting errors allows us to debug the application without waiting for user feedback. When combined with Google analytics, errors can be crossed with browsers, OS, mobile or desktop device information. Thus, making easier to find and reproduce error and finally to improve the quality of the software. 
 
-\begin{figure}[t]
-  \begin{center}
-		\includegraphics[width=\columnwidth]{imgs/CERN60Events.pdf}
-  \end{center}
-\caption{xxx}
-\label{xxx}
-\end{figure}
+\textbf{WebAPIStatus}:contains events related with the web interface to the Virtual Machine.
 
 
 
-As seen in the above diagram, the application developer is triggering high-level events to an Analytics Delegate class. This class is then firing the appropriate events to the window DOM, not requiring anyone to listen for them.
-
-When the analytics logic is managed by the analytics experts and is delivered via Google Tag Manager. It listens for analytics events in the window DOM, translates them to an appropriate format and forwards them to Google Analytics. The developer and the analytics experts maintain a document that lists all the possible events fired by the Analytics Delegate, along with the information each event carries. This way, they can optimally select and/or pre-process the high-level events into their preferred format.
-
-In addition, the analytics experts can deliver extra, low-level tracking logic (for example listening for mouse clicks or page changes) that can provide them with additional information as required.
-
-\subsubsection{Description of the events}
-
-The tracking is implemented via high-level events fired by the Challenge interface, which are then collected and forwarded to the Google Analytics. There are two major categories of events:
-
-Related to CernVM WebAPI 
-Related to user actions
-
-The events fired to the DOM window are always prefixed with the ‘analytics.’ prefix.
-
-\subsubsection{CernVM WebAPI Events}
-
-Most of the CernVM WebAPI events are fired when the state of the internal finite-state-machine is changed. For reference, the following abstract diagram illustrates the different states in the internal FSM and the possible transitions between them:
-
-
-
-\begin{figure}[t]
-  \begin{center}
-		\includegraphics[width=\columnwidth]{imgs/webAPIEvents.pdf}
-  \end{center}
-\caption{xxx}
-\label{xxx}
-\end{figure}
-
-
-When the path of actions is completed and the FSM settles on a target state, the following events are fired:
-
+\subsection{GeoTag-X}
 \begin{itemize}
-    \item {\bf vm.missing}: the VM does not exist.
-    \item {\bf vm.available}: the VM is defined in virtualbox but not yet configured.
-    \item {\bf vm.poweroff}: The VM is properly configured and powered off.
-    \item {\bf vm.saved}: the VM process has stopped and the state is saved to disk (hibernation)"
-    \item {\bf vm.paused}: the VM process is running yet it’s CPU is halted (paused in-memory).
-    \item {\bf vm.running}: the VM is running.
-\end{itemize}
-
-In addition, two special events are fired providing a higher-level information regarding the application that runs inside the Virtual Machine:
-
-\begin{itemize}
-\item {\bf vm.booted}: this event is fired when WebAPI fires the callback apiStateChanged(true), meaning that the designated port which is used for API communication between the javascript interface and the VM is available. We are assuming that the VM is “booted” because the port will be opened after the boot sequence is completed.
-
-{\textit NOTICE: This event might oscillate, because changes in the network connectivity (ex. user closing the laptop lid) will interrupt the communication, causing this event to be fired again when the network connectivity is resumed.}
-
-\item {\bf vm.collisions}: when through the API port, the javascript interface identifies that collisions are happening.
-
-{\textit NOTICE: This event has similar oscillations to vm.booted. That’s because the javascript interface is probing the job status through the API port. If the API port becomes unavailable, the interface will assume that there are no more jobs being processed. Therefore the instant it becomes available again (vm.booted), this event will be fired again.}
-
+\item What is GeoTag-X?
+\item what are we monitoring in GeoTag-X?
 \end{itemize}
 
 
-\subsubsection{Sequence of events}
-
-Since all these events are produced by the state changes of the FSM, they can only appear in sequences. The usual flow of events is shown on the following diagram:
-
-\begin{figure}[t]
-  \begin{center}
-		\includegraphics[width=\columnwidth]{imgs/sequenceOfEventsTable.png}
-  \end{center}
-\caption{xxx}
-\label{xxx}
-\end{figure}
-
-
-
-Therefore, you can extract some useful information:
-
+\subsection{VAS Game}
 \begin{itemize}
-\item {\bf How long the VM was running?}: sum the differences in timestamps between the event "vm.running" and ANY of the following three events: "vm.paused", "vm.saved", "vm.poweroff"
-
-\item {\bf Did the user successfully manage to start a simulation?}: Check if AT LEAST one "vm.booted" event is fired after the “vm.running” event.
+\item What is it?
+\item what are we monitoring in VAS?
 \end{itemize}
 
 
-\subsubsection{User Events}
-
-These events are fired by user actions on the user interface. These are:
-
-\begin{itemize}
-    \item {\bf actions.open\_rdp}: user clicked on the "eye" icon that opens the console window. There the user can see the status of the job and the job manager.
-    
-    \item {\bf actions.open\_web}: user clicked on the "pop-out" icon that opens the website served from within the Virtual Machine. There the user can see the histograms produced by the current simulation
-actions.remove: User clicked on the trash icon which is going to remove the virtual machine from his/her computer.
-    \item {\bf actions.start}: user clicked on the “start” button, which is going to create, set-up and boot the VM. If the VM is already in any other state it will be switched to ‘running’ by following the path in the FSM diagram.
-    \item {\bf actions.stop}: user clicked on the “stop” button, which is going to SAVE the Virtual Machine to the disk (hibernate). 
-    \item {\bf actions.apply}: user clicked on the “apply” button, which is going to apply the changes (s)he did on the CPU/RAM.
-    \item {\bf actions.login}: user logged in with his/her social profile
-    \item {\bf actions.logout}: user disconnected his/her social profile
-\end{itemize}
-
-
-\subsubsection{Sequence of events with WebAPI}
-
-Most of the events fired by the WebAPI are triggered by the user. The following table shows which WebAPI events can a user event trigger. The events not included in the following table are not causing changes to the Virtual Machine.
-
-If you notice a sequence of events not matching the ones below, then the state change of the VM was most probably triggered by an external cause. 
-
-
-\begin{figure}[t]
-  \begin{center}
-		\includegraphics[width=\columnwidth]{imgs/webAPIEventsSequenceTable.png}
-  \end{center}
-\caption{xxx}
-\label{xxx}
-\end{figure}
 
 
 
-\subsubsection{Other user actions that could trigger WebAPI events}
-
-Since the user can still control the Virtual Machine without the Challenge Interface (ex. through VirtualBox), a state change can occur without a user-triggered action.
-
-
-\begin{figure}[t]
-  \begin{center}
-		\includegraphics[width=\columnwidth]{imgs/userActions-webAPIEventsTable.png}
-  \end{center}
-\caption{xxx}
-\label{xxx}
-\end{figure}
-
-
-
-
-
-
-
-% \begin{itemize}
-% \item Briefly describe all projects using CCLtracker, Geotagx, VAS, 1st and 2nd CERN Challenges.
-% \item Focus on CERN challenges showing some examples of the data we gathered. 
-
-% \item It would be good to relate this data with the advantages we wrote in related work. 
-
-%  e.g. debugging tools --> Trace of errors combined with browsers, OS, device, etc..
-%       Knowing who are they --> Different segments and demographic information
-      
-%       Knowing their engagement --> picture about engagements. 
-      
-%       etc...
-
-% \end{itemize}
-
+%\subsubsection{Event forwarding specifications}
+%
+%We are using Google Analytics for handing the analytics events, which is delivered through Google Tag Manager. The latter offers the ability to dynamically inject additional tracking logic at a later time. However due to the complexity of the processes involved, it’s frequently not easy to identify the events of interest from an external library. For instance, it might be easy to track clicks on the “Start” button, but it’s not easy to understand if this action really started the Virtual Machine.
+%
+%Therefore we need to have a higher-level information that should come directly from the application. In order to accommodate future changes in the way the analytics data are processed, we agreed on an interface between the application developer and the analytics experts. 
+%
+%
+%\begin{figure}[t]
+%  \begin{center}
+%		\includegraphics[width=\columnwidth]{imgs/CERN60Events.pdf}
+%  \end{center}
+%\caption{xxx}
+%\label{xxx}
+%\end{figure}
+%
+%
+%
+%As seen in the above diagram, the application developer is triggering high-level events to an Analytics Delegate class. This class is then firing the appropriate events to the window DOM, not requiring anyone to listen for them.
+%
+%When the analytics logic is managed by the analytics experts and is delivered via Google Tag Manager. It listens for analytics events in the window DOM, translates them to an appropriate format and forwards them to Google Analytics. The developer and the analytics experts maintain a document that lists all the possible events fired by the Analytics Delegate, along with the information each event carries. This way, they can optimally select and/or pre-process the high-level events into their preferred format.
+%
+%In addition, the analytics experts can deliver extra, low-level tracking logic (for example listening for mouse clicks or page changes) that can provide them with additional information as required.
+%
+%\subsubsection{Description of the events}
+%
+%The tracking is implemented via high-level events fired by the Challenge interface, which are then collected and forwarded to the Google Analytics. There are two major categories of events:
+%
+%Related to CernVM WebAPI 
+%Related to user actions
+%
+%The events fired to the DOM window are always prefixed with the ‘analytics.’ prefix.
+%
+%\subsubsection{CernVM WebAPI Events}
+%
+%Most of the CernVM WebAPI events are fired when the state of the internal finite-state-machine is changed. For reference, the following abstract diagram illustrates the different states in the internal FSM and the possible transitions between them:
+%
+%
+%
+%\begin{figure}[t]
+%  \begin{center}
+%		\includegraphics[width=\columnwidth]{imgs/webAPIEvents.pdf}
+%  \end{center}
+%\caption{xxx}
+%\label{xxx}
+%\end{figure}
+%
+%
+%When the path of actions is completed and the FSM settles on a target state, the following events are fired:
+%
+%\begin{itemize}
+%    \item {\bf vm.missing}: the VM does not exist.
+%    \item {\bf vm.available}: the VM is defined in virtualbox but not yet configured.
+%    \item {\bf vm.poweroff}: The VM is properly configured and powered off.
+%    \item {\bf vm.saved}: the VM process has stopped and the state is saved to disk (hibernation)"
+%    \item {\bf vm.paused}: the VM process is running yet it’s CPU is halted (paused in-memory).
+%    \item {\bf vm.running}: the VM is running.
+%\end{itemize}
+%
+%In addition, two special events are fired providing a higher-level information regarding the application that runs inside the Virtual Machine:
+%
+%\begin{itemize}
+%\item {\bf vm.booted}: this event is fired when WebAPI fires the callback apiStateChanged(true), meaning that the designated port which is used for API communication between the javascript interface and the VM is available. We are assuming that the VM is “booted” because the port will be opened after the boot sequence is completed.
+%
+%{\textit NOTICE: This event might oscillate, because changes in the network connectivity (ex. user closing the laptop lid) will interrupt the communication, causing this event to be fired again when the network connectivity is resumed.}
+%
+%\item {\bf vm.collisions}: when through the API port, the javascript interface identifies that collisions are happening.
+%
+%{\textit NOTICE: This event has similar oscillations to vm.booted. That’s because the javascript interface is probing the job status through the API port. If the API port becomes unavailable, the interface will assume that there are no more jobs being processed. Therefore the instant it becomes available again (vm.booted), this event will be fired again.}
+%
+%\end{itemize}
+%
+%
+%\subsubsection{Sequence of events}
+%
+%Since all these events are produced by the state changes of the FSM, they can only appear in sequences. The usual flow of events is shown on the following diagram:
+%
+%\begin{figure}[t]
+%  \begin{center}
+%		\includegraphics[width=\columnwidth]{imgs/sequenceOfEventsTable.png}
+%  \end{center}
+%\caption{xxx}
+%\label{xxx}
+%\end{figure}
+%
+%
+%
+%Therefore, you can extract some useful information:
+%
+%\begin{itemize}
+%\item {\bf How long the VM was running?}: sum the differences in timestamps between the event "vm.running" and ANY of the following three events: "vm.paused", "vm.saved", "vm.poweroff"
+%
+%\item {\bf Did the user successfully manage to start a simulation?}: Check if AT LEAST one "vm.booted" event is fired after the “vm.running” event.
+%\end{itemize}
+%
+%
+%\subsubsection{User Events}
+%
+%These events are fired by user actions on the user interface. These are:
+%
+%\begin{itemize}
+%    \item {\bf actions.open\_rdp}: user clicked on the "eye" icon that opens the console window. There the user can see the status of the job and the job manager.
+%    
+%    \item {\bf actions.open\_web}: user clicked on the "pop-out" icon that opens the website served from within the Virtual Machine. There the user can see the histograms produced by the current simulation
+%actions.remove: User clicked on the trash icon which is going to remove the virtual machine from his/her computer.
+%    \item {\bf actions.start}: user clicked on the “start” button, which is going to create, set-up and boot the VM. If the VM is already in any other state it will be switched to ‘running’ by following the path in the FSM diagram.
+%    \item {\bf actions.stop}: user clicked on the “stop” button, which is going to SAVE the Virtual Machine to the disk (hibernate). 
+%    \item {\bf actions.apply}: user clicked on the “apply” button, which is going to apply the changes (s)he did on the CPU/RAM.
+%    \item {\bf actions.login}: user logged in with his/her social profile
+%    \item {\bf actions.logout}: user disconnected his/her social profile
+%\end{itemize}
+%
+%
+%\subsubsection{Sequence of events with WebAPI}
+%
+%Most of the events fired by the WebAPI are triggered by the user. The following table shows which WebAPI events can a user event trigger. The events not included in the following table are not causing changes to the Virtual Machine.
+%
+%If you notice a sequence of events not matching the ones below, then the state change of the VM was most probably triggered by an external cause. 
+%
+%
+%\begin{figure}[t]
+%  \begin{center}
+%		\includegraphics[width=\columnwidth]{imgs/webAPIEventsSequenceTable.png}
+%  \end{center}
+%\caption{xxx}
+%\label{xxx}
+%\end{figure}
+%
+%
+%
+%\subsubsection{Other user actions that could trigger WebAPI events}
+%
+%Since the user can still control the Virtual Machine without the Challenge Interface (ex. through VirtualBox), a state change can occur without a user-triggered action.
+%
+%
+%\begin{figure}[t]
+%  \begin{center}
+%		\includegraphics[width=\columnwidth]{imgs/userActions-webAPIEventsTable.png}
+%  \end{center}
+%\caption{xxx}
+%\label{xxx}
+%\end{figure}
+%
+%
+%
+%
+%
+%
+%
+%% \begin{itemize}
+%% \item Briefly describe all projects using CCLtracker, Geotagx, VAS, 1st and 2nd CERN Challenges.
+%% \item Focus on CERN challenges showing some examples of the data we gathered. 
+%
+%% \item It would be good to relate this data with the advantages we wrote in related work. 
+%
+%%  e.g. debugging tools --> Trace of errors combined with browsers, OS, device, etc..
+%%       Knowing who are they --> Different segments and demographic information
+%      
+%%       Knowing their engagement --> picture about engagements. 
+%      
+%%       etc...
+%
+%% \end{itemize}
+%
 
 
 
 
 \subsection{Data analysis}
 
-This section shows results gathered from the CERN Volunteer Computing Challenge using the CCLTracker framework. 
+This section shows results gathered from the CERN Volunteer Computing Challenges using the CCLTracker framework. 
+
+
+
+
+\begin{figure}[t]
+	\begin{center}
+		\subfigure[no jobs]{
+		   \includegraphics[width=0.36\columnwidth]{imgs/gender-nojobs.png}
+		 }
+	\subfigure[at least 1 job]{
+ 		  \includegraphics[width=0.34\columnwidth]{imgs/gender-1job.png}
+	 }
+	 \subfigure[more than 10 jobs]{
+		   \includegraphics[width=0.34\columnwidth]{imgs/gender-10jobs.png}
+	 }
+	 \subfigure[more than 100 jobs]{
+		   \includegraphics[width=0.34\columnwidth]{imgs/gender-100jobs.png}
+	 }
+	\end{center}
+	\caption{Users' gender balance  (a) users not computing any job, (b) users computing at least 1 jobs, (c) users computing more than 10 jobs, and (d) users computing more than 100 jobs}
+	\label{img:genderchallenge}
+\end{figure} 
+
 
 Figure~\ref{img:Sessions versus sessions running the VM} shows the total number of sessions per day (blue line) compared with those sessions where the users execute the Virtual Machine (VM) (blue line), i.e. the user really participate in the challenge . 
-
-
-
-
 
 
 \begin{figure*}[t]
