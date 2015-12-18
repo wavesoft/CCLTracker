@@ -36,15 +36,19 @@ This paper presents CCLTracker analytics framework that is intended to overcome 
 
 The explosion of web applications and on-line services over the last 20 years have made analytics tools highly required to understand who the users are, how they find the web, and how they behave. That allows to monitor key performance indicators (e.g. downloads, sells, or participation on web), improve users interfaces, planing, execute, and evaluate actions to increase users engagement. 
 
-There are a bunch of different analytics tools such as Google Analytics, and Piwik, which provide very interesting analytics information about the users, and the website. These tools store and aggregate the analytics data, and provide a Graphical User Interface (GUI) that allows users without programming skills to manipulate analytics data and create customs reports to periodically monitor key performance indicators.  
+A web based citizen science project is not  different than other online services. Dissemination actions are focused also on engaging users and empower their participation on the project. Citizen science projects require understand who are the users, where they are coming from, and how they behave in the website. Additionally, citizen science projects aim to provide learning outcomes. Unlike other web services, citizen science projects focus on two kind of indicators: (1) key performance indicator such as number of visitors, number of goals achieved (e.g. number of tasks developed by users), or number of clicks on links to external sources; and (2) key learning indicators such as accuracy of the task done, speed developing the task, \% of tutorial and extra contents accessed, or participation in forum or chats. Key performance and learning indicators can be measured using analytics data. 
 
-However, the information regarding the user behaviour is limited to average time per session, pages views, or bound rate (i.e. percentage of people that leave the site without ant interaction). Both tools, GA and Piwik allows to send application specific events, i.e. events designed to be fired from your website when tracking specific actions. 
+There are a bunch of different analytics tools such as Google Analytics, and Piwik, which provide very interesting analytics information about the users, and the website. These tools store and aggregate the analytics data, and provide a Graphical User Interface (GUI) that allows users without programming skills to manipulate analytics data and create customs reports to periodically monitor key  indicators.  
 
+<<<<<<< HEAD
  For example, we can add number of clicks per sessions, number of times a user writes on the forum, clicks on internal and external links, whether the user is scrolling down the page or how long a user has been watching a video. All these examples require to program a tracking system in the client side and connect it with the analytics tool. This tracking system is tough to implement and keep it updated over the different version of the web. Additionally, it creates dependencies with the analytics tools.
+=======
+However, the information regarding the user behaviour is limited to average time per session, pages views, or bound rate (i.e. percentage of people that leave the site without ant interaction). These information is not relevant for evaluating user participation in citizen science projects, neither to understands who are the people who really contribute. Even thought, analytics tools provide information about where the users are coming from, it is not enough to evaluate dissemination activities. E.g. we could observe than 500 users are coming from reddit, but if we do not know if they participate on the citizen science project. 
+>>>>>>> master
 
-% which already have their own eco-system of services giving support and extending their functionality (i.e. Google Tag Manager, Google Query Explorer, visualization tools, Libraries to export data to programing languages, etc.).
+Monitoring key performance and learning indicators in a citizen science projects require to monitor the user behaviour.  Both tools, GA and Piwik allows to send application specific events, i.e. events designed to be fired from the website when monitoring users' specific actions. For example, we can add number of click per sessions, number of times an user writes on the forum, clicks to internal and external links, whether the user is scrolling down the web or how long time an user has been watching a video. All these examples require to program a tracking system in the client side and connect it with the analytics tool. This tracking system is tough to implement and keep it updated over the different version of the web. Additionally, it creates dependencies with the analytics tools.
 
-This paper presents CCLTracker analytics framework to ease and overcome current analytics tool limitations. The main contribution of this framework is a Java Script library that can be easily connected to other analytics tools, providing:
+This paper presents CCLTracker analytics framework to ease monitoring users behaviour in citizen science projects, overcoming current analytics tool limitations and reducing the implementation effort. The main contribution of this framework is a Java Script library that can be easily connected to other analytics tools, providing:
 
 \begin{itemize}
 \item Client side aggregation of data before sending it to the analytics tool (i.e. GA or Piwik). 
@@ -182,11 +186,21 @@ The CCLTracker Framework has been integrated in these applications in order to u
 
 CERN volunteer computing challenges is a periodic volunteer computing event. The CCLTracker framework has been used in two of those events. Namely, at the CERN 60 Challenges, 12-days event that run during the last days of December 2014 (9-20 Dec.), and the CERN Public Computing Challenge 2015 that run from 1st Nov to 1st Dic 2015. The purpose of these challenges were to test the experimental CernVM WebAPI technology and to understand users behaviour and interest behind volunteer computing project. Analytics information gathered from CCLTracker is used for measuring engagement, evaluate the user interface and for evaluating the CERN VM Technology. 
 
+
+\begin{figure}[th]
+  \begin{center}
+		\includegraphics[width=11cm]{imgs/challenge.png}
+  \end{center}
+\caption{CERN Public Computing Challenge 2015)}
+\label{img:challenge}
+\end{figure}
+
+
 Basically, the events monitored by the CCLTracker framework are clissified into 3 groups:
 
 \textbf{Users actions} contains all events related with user actions on the challenge website such as clicking external links, start button,  stop button, or changing the  virtual machine settings (i.e. number of cores and memory the user is donating). 
 
-\textbf{Users goals}: are used to monitor user achievements over the participation on the challenge. Some examples are CPU time donated, number of jobs computed, or how many times an user starts the VM. Goals are pre-aggregated before firing the event. This has two main advantages: (1) it easy the data analysis and (2) it allows to extract demographic data for different user segments based on participation (e.g. gender of users who has contribute more than 100 jobs, or interest of user who visit the website but didn't start contributing). 
+\textbf{Users goals}: are used to monitor user achievements over the participation on the challenge. Some examples are CPU time donated, number of jobs computed, or how many times an user starts the VM. Goals are pre-aggregated before firing the event. This has two main advantages: (1) it easy the data analysis and (2) it allows to extract demographic data for different user segments based on participation (e.g. gender of users who has contribute more than 100 jobs, or interest of user who visit the website but did not contribute). 
 
 \textbf{VM status}: contains all event related with the status of the virtual machine such as available, paused, running, stopped, or booted. Additionally, all erros are also reported as events. Reporting errors allows us to debug the application without waiting for user feedback. When combined with Google analytics, errors can be crossed with browsers, OS, mobile or desktop device information. Thus, making easier to find and reproduce error and finally to improve the quality of the software. 
 
@@ -195,19 +209,31 @@ Basically, the events monitored by the CCLTracker framework are clissified into 
 
 
 \subsection{GeoTag-X}
-\begin{itemize}
-\item What is GeoTag-X?
-\item what are we monitoring in GeoTag-X?
-\end{itemize}
+
+Geotag-X is a pilot project within Citizen Cyberlab to develop and test tools to engage and educate volunteers in analysing photos coming out of humanitarian crises, with the aim of producing datasets that can be used in relief and recovery efforts by disaster response agencies.
+
+
+
+\begin{figure}[th]
+  \begin{center}
+		\includegraphics[width=11cm]{imgs/geotagx.png}
+  \end{center}
+\caption{GeoTag-X application}
+\label{img:geotagx}
+\end{figure}
 
 
 \subsection{VAS Game}
-\begin{itemize}
-\item What is it?
-\item what are we monitoring in VAS?
-\end{itemize}
 
+Virtual Atom Smasher is an educational game that	allows citizens	to contribute to scientific discoveries at	CERN without any prior knowledge	of particle physics. They	control a Monte Carlo event generator (a virtual	particle collider) that produces scientific	data	analogous to the ones generated by the real High Energy Physics experiments, and their goal is to tune its parameters until the results match the measured	experimental results. The outcomes are important to the scientific community, since they can validate the current scientific hypotheses.
 
+\begin{figure}[th]
+  \begin{center}
+		\includegraphics[width=11cm]{imgs/vas.png}
+  \end{center}
+\caption{Virtual Atome Smasher game}
+\label{img:vas}
+\end{figure}
 
 
 
