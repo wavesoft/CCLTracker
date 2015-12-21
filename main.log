@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.8)  18 DEC 2015 11:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.8)  18 DEC 2015 16:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -371,136 +371,178 @@ Overfull \hbox (52.99326pt too wide) in paragraph at lines 15--15
 [1
 
 {/usr/local/texlive/2015basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 50.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 52.
 
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 52.
  [2]
 
-LaTeX Warning: Reference `CCLTracker' on page 3 undefined on input line 58.
+LaTeX Warning: Reference `CCLTracker' on page 3 undefined on input line 60.
 
 
-LaTeX Warning: Reference `sec:caseStudy' on page 3 undefined on input line 58.
+LaTeX Warning: Reference `sec:caseStudy' on page 3 undefined on input line 60.
 
 [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 91.
+(Font)              <7> on input line 93.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 91.
- [4] [5] <imgs/ccltrackerFramework.pdf, id=29, 569.12625pt x 256.96pt>
+(Font)              <5> on input line 93.
+ [4]
+
+Package natbib Warning: Citation `ferguson2012learning' on page 5 undefined on 
+input line 114.
+
+
+Package natbib Warning: Citation `LAK11' on page 5 undefined on input line 115.
+
+
+
+Package natbib Warning: Citation `LAFW' on page 5 undefined on input line 116.
+
+
+Package natbib Warning: Citation `EngProf' on page 5 undefined on input line 11
+7.
+
+
+Package natbib Warning: Citation `VolunteerEng' on page 5 undefined on input li
+ne 117.
+
+
+Package natbib Warning: Citation `EngConcep' on page 5 undefined on input line 
+117.
+
+
+Package natbib Warning: Citation `LAFW' on page 5 undefined on input line 117.
+
+[5] [6] <imgs/ccltrackerFramework.pdf, id=32, 569.12625pt x 256.96pt>
 File: imgs/ccltrackerFramework.pdf Graphic file (type pdf)
 
 <use imgs/ccltrackerFramework.pdf>
-Package pdftex.def Info: imgs/ccltrackerFramework.pdf used on input line 146.
+Package pdftex.def Info: imgs/ccltrackerFramework.pdf used on input line 151.
 (pdftex.def)             Requested size: 312.9803pt x 141.31667pt.
- [6] [7 <./imgs/ccltrackerFramework.pdf>]
+ [7 <./imgs/ccltrackerFramework.pdf>]
 <imgs/challenge.png, id=59, 1382.16376pt x 622.325pt>
 File: imgs/challenge.png Graphic file (type png)
  <use imgs/challenge.png>
-Package pdftex.def Info: imgs/challenge.png used on input line 185.
+Package pdftex.def Info: imgs/challenge.png used on input line 190.
 (pdftex.def)             Requested size: 312.9803pt x 140.91919pt.
 
-[8 <./imgs/challenge.png>]
-<imgs/RunningVSNoRunningVM(sessionsandusers).png, id=65, 378.41376pt x 198.7425
+[8] <imgs/geotagx.png, id=64, 1442.38875pt x 648.4225pt>
+File: imgs/geotagx.png Graphic file (type png)
+
+<use imgs/geotagx.png>
+Package pdftex.def Info: imgs/geotagx.png used on input line 217.
+(pdftex.def)             Requested size: 312.9803pt x 140.69435pt.
+ [9 <./imgs/challenge.png>]
+<imgs/vas.png, id=69, 1443.3925pt x 738.76pt>
+File: imgs/vas.png Graphic file (type png)
+ <use imgs/vas.png>
+Package pdftex.def Info: imgs/vas.png used on input line 230.
+(pdftex.def)             Requested size: 312.9803pt x 160.183pt.
+ [10 <./imgs/geotagx.png> <./imgs/vas.png>]
+<imgs/RunningVSNoRunningVM(sessionsandusers).png, id=75, 378.41376pt x 198.7425
 pt>
 File: imgs/RunningVSNoRunningVM(sessionsandusers).png Graphic file (type png)
  <use imgs/RunningVSNoRunningVM(sessionsandusers).png>
 Package pdftex.def Info: imgs/RunningVSNoRunningVM(sessionsandusers).png used o
-n input line 404.
+n input line 423.
 (pdftex.def)             Requested size: 172.5pt x 90.5978pt.
 
-<imgs/VisitorVSParticipants-Percentage.png, id=66, 279.444pt x 291.9708pt>
+<imgs/VisitorVSParticipants-Percentage.png, id=76, 279.444pt x 291.9708pt>
 File: imgs/VisitorVSParticipants-Percentage.png Graphic file (type png)
 
 <use imgs/VisitorVSParticipants-Percentage.png>
 Package pdftex.def Info: imgs/VisitorVSParticipants-Percentage.png used on inpu
-t line 407.
+t line 426.
 (pdftex.def)             Requested size: 117.29874pt x 122.5556pt.
 
-<imgs/externalLinks.png, id=67, 325.215pt x 217.7736pt>
+<imgs/externalLinks.png, id=77, 325.215pt x 217.7736pt>
 File: imgs/externalLinks.png Graphic file (type png)
 
 <use imgs/externalLinks.png>
-Package pdftex.def Info: imgs/externalLinks.png used on input line 410.
+Package pdftex.def Info: imgs/externalLinks.png used on input line 429.
 (pdftex.def)             Requested size: 155.24895pt x 103.9619pt.
 
-<imgs/sessionVSsessionVMRunning.png, id=68, 1179.40625pt x 199.74625pt>
+<imgs/sessionVSsessionVMRunning.png, id=78, 1179.40625pt x 199.74625pt>
 File: imgs/sessionVSsessionVMRunning.png Graphic file (type png)
 
 <use imgs/sessionVSsessionVMRunning.png>
 Package pdftex.def Info: imgs/sessionVSsessionVMRunning.png used on input line 
-425.
+444.
 (pdftex.def)             Requested size: 426.79134pt x 72.28348pt.
 
-Overfull \hbox (81.79134pt too wide) in paragraph at lines 425--426
+Overfull \hbox (81.79134pt too wide) in paragraph at lines 444--445
  [] 
  []
 
-<imgs/usersbyjobs.png, id=69, 422.0568pt x 218.2554pt>
+<imgs/usersbyjobs.png, id=79, 422.0568pt x 218.2554pt>
 File: imgs/usersbyjobs.png Graphic file (type png)
 
 <use imgs/usersbyjobs.png>
-Package pdftex.def Info: imgs/usersbyjobs.png used on input line 439.
+Package pdftex.def Info: imgs/usersbyjobs.png used on input line 458.
 (pdftex.def)             Requested size: 312.9803pt x 161.85614pt.
 
-<imgs/usersbycputime.png, id=70, 362.3136pt x 217.7736pt>
+<imgs/usersbycputime.png, id=80, 362.3136pt x 217.7736pt>
 File: imgs/usersbycputime.png Graphic file (type png)
 
 <use imgs/usersbycputime.png>
-Package pdftex.def Info: imgs/usersbycputime.png used on input line 450.
+Package pdftex.def Info: imgs/usersbycputime.png used on input line 469.
 (pdftex.def)             Requested size: 312.9803pt x 188.11902pt.
 
-<imgs/participationByCountry.png, id=71, 611.886pt x 376.2858pt>
+<imgs/participationByCountry.png, id=81, 611.886pt x 376.2858pt>
 File: imgs/participationByCountry.png Graphic file (type png)
 
 <use imgs/participationByCountry.png>
-Package pdftex.def Info: imgs/participationByCountry.png used on input line 464
+Package pdftex.def Info: imgs/participationByCountry.png used on input line 483
 .
 (pdftex.def)             Requested size: 312.9803pt x 192.47163pt.
- [9]
-<imgs/usersbyreferrals.png, id=75, 218.7372pt x 312.6882pt>
+
+<imgs/usersbyreferrals.png, id=82, 218.7372pt x 312.6882pt>
 File: imgs/usersbyreferrals.png Graphic file (type png)
 
 <use imgs/usersbyreferrals.png>
-Package pdftex.def Info: imgs/usersbyreferrals.png used on input line 476.
+Package pdftex.def Info: imgs/usersbyreferrals.png used on input line 495.
 (pdftex.def)             Requested size: 199.16928pt x 284.71846pt.
- [10 <./imgs/RunningVSNoRunningVM(sessionsandusers).png> <./imgs/VisitorVSParti
-cipants-Percentage.png> <./imgs/externalLinks.png>] <imgs/gender-nojobs.png, id
-=82, 369.38pt x 402.50375pt>
+ [11]
+<imgs/gender-nojobs.png, id=86, 369.38pt x 402.50375pt>
 File: imgs/gender-nojobs.png Graphic file (type png)
 
 <use imgs/gender-nojobs.png>
-Package pdftex.def Info: imgs/gender-nojobs.png used on input line 491.
+Package pdftex.def Info: imgs/gender-nojobs.png used on input line 510.
 (pdftex.def)             Requested size: 124.20021pt x 135.3386pt.
 
-<imgs/gender-1job.png, id=83, 343.2825pt x 391.4625pt>
+<imgs/gender-1job.png, id=87, 343.2825pt x 391.4625pt>
 File: imgs/gender-1job.png Graphic file (type png)
 
 <use imgs/gender-1job.png>
-Package pdftex.def Info: imgs/gender-1job.png used on input line 494.
+Package pdftex.def Info: imgs/gender-1job.png used on input line 513.
 (pdftex.def)             Requested size: 117.29874pt x 133.75851pt.
 
-<imgs/gender-10jobs.png, id=84, 343.2825pt x 391.4625pt>
+<imgs/gender-10jobs.png, id=88, 343.2825pt x 391.4625pt>
 File: imgs/gender-10jobs.png Graphic file (type png)
 
 <use imgs/gender-10jobs.png>
-Package pdftex.def Info: imgs/gender-10jobs.png used on input line 497.
+Package pdftex.def Info: imgs/gender-10jobs.png used on input line 516.
 (pdftex.def)             Requested size: 117.29874pt x 133.75851pt.
 
-<imgs/gender-100jobs.png, id=85, 343.2825pt x 391.4625pt>
+<imgs/gender-100jobs.png, id=89, 343.2825pt x 391.4625pt>
 File: imgs/gender-100jobs.png Graphic file (type png)
 
 <use imgs/gender-100jobs.png>
-Package pdftex.def Info: imgs/gender-100jobs.png used on input line 500.
+Package pdftex.def Info: imgs/gender-100jobs.png used on input line 519.
 (pdftex.def)             Requested size: 117.29874pt x 133.75851pt.
-
+ [12 <./imgs/RunningVSNoRunningVM(sessionsandusers).png> <./imgs/VisitorVSParti
+cipants-Percentage.png> <./imgs/externalLinks.png>]
 No file main.bbl.
-[11 <./imgs/sessionVSsessionVMRunning.png> <./imgs/usersbyjobs.png>] [12 <./img
-s/usersbycputime.png> <./imgs/participationByCountry.png>] [13 <./imgs/usersbyr
-eferrals.png>] [14 <./imgs/gender-nojobs.png> <./imgs/gender-1job.png> <./imgs/
+
+Package natbib Warning: There were undefined citations.
+
+[13 <./imgs/sessionVSsessionVMRunning.png> <./imgs/usersbyjobs.png>] [14 <./img
+s/usersbycputime.png> <./imgs/participationByCountry.png>] [15 <./imgs/usersbyr
+eferrals.png>] [16 <./imgs/gender-nojobs.png> <./imgs/gender-1job.png> <./imgs/
 gender-10jobs.png> <./imgs/gender-100jobs.png>] (./main.aux)
 
 LaTeX Warning: There were undefined references.
@@ -510,10 +552,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 2149 strings out of 494501
- 30485 string characters out of 6167030
- 90509 words of memory out of 5000000
- 5397 multiletter control sequences out of 15000+600000
+ 2167 strings out of 494501
+ 30744 string characters out of 6167030
+ 93518 words of memory out of 5000000
+ 5413 multiletter control sequences out of 15000+600000
  8502 words of font info for 30 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  37i,8n,23p,1801b,268s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -529,10 +571,10 @@ blic/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (14 pages, 5813559 bytes).
+Output written on main.pdf (16 pages, 8384571 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
+ 154 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
