@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+Database file #1: references.bib
+Warning--entry type for "LAK11" isn't style-file defined
+--line 125 of file references.bib
+Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "EngProf"
+Warning--I didn't find a database entry for "VolunteerEng"
+Warning--I didn't find a database entry for "EngConcep"
+Warning--to sort, need author or key in LAK11
+Warning--empty journal in LAFW
+Warning--empty year in LAFW
+You've used 3 entries,
+            2118 wiz_defined-function locations,
+            518 strings with 4560 characters,
+and the built_in function-call counts, 824 in all, are:
+= -- 72
+> -- 41
+< -- 0
++ -- 17
+- -- 14
+* -- 61
+:= -- 138
+add.period$ -- 6
+call.type$ -- 3
+change.case$ -- 16
+chr.to.int$ -- 0
+cite$ -- 6
+duplicate$ -- 28
+empty$ -- 68
+format.name$ -- 14
+if$ -- 164
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 2
+newline$ -- 15
+num.names$ -- 4
+pop$ -- 23
+preamble$ -- 1
+purify$ -- 13
+quote$ -- 0
+skip$ -- 23
+stack$ -- 0
+substring$ -- 40
+swap$ -- 2
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 12
+warning$ -- 3
+while$ -- 6
+width$ -- 4
+write$ -- 25
+(There were 8 warnings)
