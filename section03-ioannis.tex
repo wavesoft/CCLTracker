@@ -3,7 +3,6 @@
 \newcommand{\CCLTrackerJS}{ \emph{CCLTracker Javascript Library} }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 As mentioned before, \emph{Google Tag Manager} provides a simple, graphical interface for defining analytics events. These events target some particular DOM elements in the website, identified by some characteristics. Providing this information is a trivial task for simple websites, but it's nearly impossible on web applications. That's because there are too many elements to keep track of, and their semantics might even change over time (ex. a 'Start' button might become a 'Stop' button).Therefore we need to have a higher-level information that should come directly from the application. 
 
 There are already various analytics toolkits available, however they are either overly complicated, or they abstract too much information, making it more complicated for us to process the data\footnote{https://segment.com/docs/libraries/analytics.js/}. Moreover, most of these solutions are available only with a paid subscription or not available under an open-source licence. In addition, we didn't want to lose the core functionality from \emph{Google Analytics} or \emph{Piwik}, so we decided to develop an additive solution.
