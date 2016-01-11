@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.8)  18 DEC 2015 16:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.8)  11 JAN 2016 09:28
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
@@ -281,7 +281,14 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 (./subfigure.sty
 \c@subfigure=\count89
-) (./main.aux)
+) (./main.aux
+
+LaTeX Warning: Label `img:geotagx' multiply defined.
+
+
+LaTeX Warning: Label `img:ValidateVSNoValidate' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -296,8 +303,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
-
-(/usr/local/texlive/2015basic/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2015basic/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count90
 \scratchdimen=\dimen105
@@ -390,173 +396,206 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 93.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 93.
- [4]
+ [4] [5]
 
-Package natbib Warning: Citation `ferguson2012learning' on page 5 undefined on 
-input line 114.
-
-
-Package natbib Warning: Citation `LAK11' on page 5 undefined on input line 115.
+Package natbib Warning: Citation `EngProf' on page 6 undefined on input line 12
+4.
 
 
-
-Package natbib Warning: Citation `LAFW' on page 5 undefined on input line 116.
-
-
-Package natbib Warning: Citation `EngProf' on page 5 undefined on input line 11
-7.
+Package natbib Warning: Citation `VolunteerEng' on page 6 undefined on input li
+ne 124.
 
 
-Package natbib Warning: Citation `VolunteerEng' on page 5 undefined on input li
-ne 117.
+Package natbib Warning: Citation `EngConcep' on page 6 undefined on input line 
+124.
 
-
-Package natbib Warning: Citation `EngConcep' on page 5 undefined on input line 
-117.
-
-
-Package natbib Warning: Citation `LAFW' on page 5 undefined on input line 117.
-
-[5] [6] <imgs/ccltrackerFramework.pdf, id=32, 569.12625pt x 256.96pt>
+[6] <imgs/ccltrackerFramework.pdf, id=32, 569.12625pt x 256.96pt>
 File: imgs/ccltrackerFramework.pdf Graphic file (type pdf)
 
 <use imgs/ccltrackerFramework.pdf>
-Package pdftex.def Info: imgs/ccltrackerFramework.pdf used on input line 151.
+Package pdftex.def Info: imgs/ccltrackerFramework.pdf used on input line 158.
 (pdftex.def)             Requested size: 312.9803pt x 141.31667pt.
- [7 <./imgs/ccltrackerFramework.pdf>]
-<imgs/challenge.png, id=59, 1382.16376pt x 622.325pt>
+ [7]
+<imgs/challenge.png, id=37, 1382.16376pt x 622.325pt>
 File: imgs/challenge.png Graphic file (type png)
  <use imgs/challenge.png>
-Package pdftex.def Info: imgs/challenge.png used on input line 190.
+Package pdftex.def Info: imgs/challenge.png used on input line 197.
 (pdftex.def)             Requested size: 312.9803pt x 140.91919pt.
 
-[8] <imgs/geotagx.png, id=64, 1442.38875pt x 648.4225pt>
-File: imgs/geotagx.png Graphic file (type png)
-
-<use imgs/geotagx.png>
-Package pdftex.def Info: imgs/geotagx.png used on input line 217.
-(pdftex.def)             Requested size: 312.9803pt x 140.69435pt.
- [9 <./imgs/challenge.png>]
-<imgs/vas.png, id=69, 1443.3925pt x 738.76pt>
-File: imgs/vas.png Graphic file (type png)
- <use imgs/vas.png>
-Package pdftex.def Info: imgs/vas.png used on input line 230.
-(pdftex.def)             Requested size: 312.9803pt x 160.183pt.
- [10 <./imgs/geotagx.png> <./imgs/vas.png>]
-<imgs/RunningVSNoRunningVM(sessionsandusers).png, id=75, 378.41376pt x 198.7425
+[8 <./imgs/ccltrackerFramework.pdf>]
+<imgs/RunningVSNoRunningVM(sessionsandusers).png, id=64, 378.41376pt x 198.7425
 pt>
 File: imgs/RunningVSNoRunningVM(sessionsandusers).png Graphic file (type png)
  <use imgs/RunningVSNoRunningVM(sessionsandusers).png>
 Package pdftex.def Info: imgs/RunningVSNoRunningVM(sessionsandusers).png used o
-n input line 423.
+n input line 228.
 (pdftex.def)             Requested size: 172.5pt x 90.5978pt.
 
-<imgs/VisitorVSParticipants-Percentage.png, id=76, 279.444pt x 291.9708pt>
+<imgs/VisitorVSParticipants-Percentage.png, id=65, 279.444pt x 291.9708pt>
 File: imgs/VisitorVSParticipants-Percentage.png Graphic file (type png)
 
 <use imgs/VisitorVSParticipants-Percentage.png>
 Package pdftex.def Info: imgs/VisitorVSParticipants-Percentage.png used on inpu
-t line 426.
+t line 231.
 (pdftex.def)             Requested size: 117.29874pt x 122.5556pt.
 
-<imgs/externalLinks.png, id=77, 325.215pt x 217.7736pt>
+<imgs/externalLinks.png, id=66, 325.215pt x 217.7736pt>
 File: imgs/externalLinks.png Graphic file (type png)
 
 <use imgs/externalLinks.png>
-Package pdftex.def Info: imgs/externalLinks.png used on input line 429.
+Package pdftex.def Info: imgs/externalLinks.png used on input line 234.
 (pdftex.def)             Requested size: 155.24895pt x 103.9619pt.
-
-<imgs/sessionVSsessionVMRunning.png, id=78, 1179.40625pt x 199.74625pt>
+ [9 <./imgs/challenge.png>]
+<imgs/sessionVSsessionVMRunning.png, id=71, 1179.40625pt x 199.74625pt>
 File: imgs/sessionVSsessionVMRunning.png Graphic file (type png)
 
 <use imgs/sessionVSsessionVMRunning.png>
 Package pdftex.def Info: imgs/sessionVSsessionVMRunning.png used on input line 
-444.
+249.
 (pdftex.def)             Requested size: 426.79134pt x 72.28348pt.
 
-Overfull \hbox (81.79134pt too wide) in paragraph at lines 444--445
+Overfull \hbox (81.79134pt too wide) in paragraph at lines 249--250
  [] 
  []
 
-<imgs/usersbyjobs.png, id=79, 422.0568pt x 218.2554pt>
+<imgs/usersbyjobs.png, id=72, 422.0568pt x 218.2554pt>
 File: imgs/usersbyjobs.png Graphic file (type png)
 
 <use imgs/usersbyjobs.png>
-Package pdftex.def Info: imgs/usersbyjobs.png used on input line 458.
+Package pdftex.def Info: imgs/usersbyjobs.png used on input line 263.
 (pdftex.def)             Requested size: 312.9803pt x 161.85614pt.
-
-<imgs/usersbycputime.png, id=80, 362.3136pt x 217.7736pt>
+ [10 <./imgs/RunningVSNoRunningVM(sessionsandusers).png> <./imgs/VisitorVSParti
+cipants-Percentage.png> <./imgs/externalLinks.png>]
+<imgs/usersbycputime.png, id=79, 362.3136pt x 217.7736pt>
 File: imgs/usersbycputime.png Graphic file (type png)
 
 <use imgs/usersbycputime.png>
-Package pdftex.def Info: imgs/usersbycputime.png used on input line 469.
+Package pdftex.def Info: imgs/usersbycputime.png used on input line 274.
 (pdftex.def)             Requested size: 312.9803pt x 188.11902pt.
 
-<imgs/participationByCountry.png, id=81, 611.886pt x 376.2858pt>
+<imgs/participationByCountry.png, id=80, 611.886pt x 376.2858pt>
 File: imgs/participationByCountry.png Graphic file (type png)
 
 <use imgs/participationByCountry.png>
-Package pdftex.def Info: imgs/participationByCountry.png used on input line 483
+Package pdftex.def Info: imgs/participationByCountry.png used on input line 288
 .
 (pdftex.def)             Requested size: 312.9803pt x 192.47163pt.
 
-<imgs/usersbyreferrals.png, id=82, 218.7372pt x 312.6882pt>
+<imgs/usersbyreferrals.png, id=81, 218.7372pt x 312.6882pt>
 File: imgs/usersbyreferrals.png Graphic file (type png)
 
 <use imgs/usersbyreferrals.png>
-Package pdftex.def Info: imgs/usersbyreferrals.png used on input line 495.
+Package pdftex.def Info: imgs/usersbyreferrals.png used on input line 300.
 (pdftex.def)             Requested size: 199.16928pt x 284.71846pt.
- [11]
-<imgs/gender-nojobs.png, id=86, 369.38pt x 402.50375pt>
+ [11 <./imgs/sessionVSsessionVMRunning.png> <./imgs/usersbyjobs.png>] <imgs/gen
+der-nojobs.png, id=87, 369.38pt x 402.50375pt>
 File: imgs/gender-nojobs.png Graphic file (type png)
 
 <use imgs/gender-nojobs.png>
-Package pdftex.def Info: imgs/gender-nojobs.png used on input line 510.
+Package pdftex.def Info: imgs/gender-nojobs.png used on input line 315.
 (pdftex.def)             Requested size: 124.20021pt x 135.3386pt.
 
-<imgs/gender-1job.png, id=87, 343.2825pt x 391.4625pt>
+<imgs/gender-1job.png, id=88, 343.2825pt x 391.4625pt>
 File: imgs/gender-1job.png Graphic file (type png)
 
 <use imgs/gender-1job.png>
-Package pdftex.def Info: imgs/gender-1job.png used on input line 513.
+Package pdftex.def Info: imgs/gender-1job.png used on input line 318.
 (pdftex.def)             Requested size: 117.29874pt x 133.75851pt.
 
-<imgs/gender-10jobs.png, id=88, 343.2825pt x 391.4625pt>
+<imgs/gender-10jobs.png, id=89, 343.2825pt x 391.4625pt>
 File: imgs/gender-10jobs.png Graphic file (type png)
 
 <use imgs/gender-10jobs.png>
-Package pdftex.def Info: imgs/gender-10jobs.png used on input line 516.
+Package pdftex.def Info: imgs/gender-10jobs.png used on input line 321.
 (pdftex.def)             Requested size: 117.29874pt x 133.75851pt.
 
-<imgs/gender-100jobs.png, id=89, 343.2825pt x 391.4625pt>
+<imgs/gender-100jobs.png, id=90, 343.2825pt x 391.4625pt>
 File: imgs/gender-100jobs.png Graphic file (type png)
 
 <use imgs/gender-100jobs.png>
-Package pdftex.def Info: imgs/gender-100jobs.png used on input line 519.
+Package pdftex.def Info: imgs/gender-100jobs.png used on input line 324.
 (pdftex.def)             Requested size: 117.29874pt x 133.75851pt.
- [12 <./imgs/RunningVSNoRunningVM(sessionsandusers).png> <./imgs/VisitorVSParti
-cipants-Percentage.png> <./imgs/externalLinks.png>]
-No file main.bbl.
+
+<imgs/geotagx.png, id=91, 1442.38875pt x 648.4225pt>
+File: imgs/geotagx.png Graphic file (type png)
+ <use imgs/geotagx.png>
+Package pdftex.def Info: imgs/geotagx.png used on input line 340.
+(pdftex.def)             Requested size: 312.9803pt x 140.69435pt.
+
+<imgs/Geotag-X/GA-usersNotasks.png, id=92, 714.67pt x 373.395pt>
+File: imgs/Geotag-X/GA-usersNotasks.png Graphic file (type png)
+
+<use imgs/Geotag-X/GA-usersNotasks.png>
+Package pdftex.def Info: imgs/Geotag-X/GA-usersNotasks.png used on input line 3
+51.
+(pdftex.def)             Requested size: 312.9803pt x 163.52513pt.
+
+<imgs/Geotag-X/users-events.png, id=93, 290.0436pt x 184.5294pt>
+File: imgs/Geotag-X/users-events.png Graphic file (type png)
+
+<use imgs/Geotag-X/users-events.png>
+Package pdftex.def Info: imgs/Geotag-X/users-events.png used on input line 360.
+
+(pdftex.def)             Requested size: 312.9803pt x 199.12828pt.
+
+<imgs/Geotag-X/users-tasks.png, id=94, 290.0436pt x 177.7842pt>
+File: imgs/Geotag-X/users-tasks.png Graphic file (type png)
+
+<use imgs/Geotag-X/users-tasks.png>
+Package pdftex.def Info: imgs/Geotag-X/users-tasks.png used on input line 370.
+(pdftex.def)             Requested size: 312.9803pt x 191.84941pt.
+
+<imgs/vas.png, id=95, 1443.3925pt x 738.76pt>
+File: imgs/vas.png Graphic file (type png)
+ <use imgs/vas.png>
+Package pdftex.def Info: imgs/vas.png used on input line 390.
+(pdftex.def)             Requested size: 312.9803pt x 160.183pt.
+
+<imgs/VAS/ValidationvsNoValidation.png, id=96, 362.3136pt x 217.7736pt>
+File: imgs/VAS/ValidationvsNoValidation.png Graphic file (type png)
+
+<use imgs/VAS/ValidationvsNoValidation.png>
+Package pdftex.def Info: imgs/VAS/ValidationvsNoValidation.png used on input li
+ne 401.
+(pdftex.def)             Requested size: 312.9803pt x 188.11902pt.
+File: imgs/VAS/ValidationvsNoValidation.png Graphic file (type png)
+
+<use imgs/VAS/ValidationvsNoValidation.png>
+Package pdftex.def Info: imgs/VAS/ValidationvsNoValidation.png used on input li
+ne 410.
+(pdftex.def)             Requested size: 312.9803pt x 188.11902pt.
+
+<imgs/VAS/Users-nbValidations.png, id=97, 383.5128pt x 218.2554pt>
+File: imgs/VAS/Users-nbValidations.png Graphic file (type png)
+
+<use imgs/VAS/Users-nbValidations.png>
+Package pdftex.def Info: imgs/VAS/Users-nbValidations.png used on input line 42
+0.
+(pdftex.def)             Requested size: 312.9803pt x 178.11801pt.
+ [12 <./imgs/usersbycputime.png>]
+(./main.bbl [13 <./imgs/participationByCountry.png>])
 
 Package natbib Warning: There were undefined citations.
 
-[13 <./imgs/sessionVSsessionVMRunning.png> <./imgs/usersbyjobs.png>] [14 <./img
-s/usersbycputime.png> <./imgs/participationByCountry.png>] [15 <./imgs/usersbyr
-eferrals.png>] [16 <./imgs/gender-nojobs.png> <./imgs/gender-1job.png> <./imgs/
-gender-10jobs.png> <./imgs/gender-100jobs.png>] (./main.aux)
+[14 <./imgs/usersbyreferrals.png>] [15 <./imgs/gender-nojobs.png> <./imgs/gende
+r-1job.png> <./imgs/gender-10jobs.png> <./imgs/gender-100jobs.png>] [16 <./imgs
+/geotagx.png> <./imgs/Geotag-X/GA-usersNotasks.png>] [17 <./imgs/Geotag-X/users
+-events.png> <./imgs/Geotag-X/users-tasks.png>] [18 <./imgs/vas.png> <./imgs/VA
+S/ValidationvsNoValidation.png>] [19 <./imgs/VAS/Users-nbValidations.png>]
+(./main.aux)
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2167 strings out of 494501
- 30744 string characters out of 6167030
- 93518 words of memory out of 5000000
- 5413 multiletter control sequences out of 15000+600000
- 8502 words of font info for 30 fonts, out of 8000000 for 9000
+ 2208 strings out of 494501
+ 31863 string characters out of 6167030
+ 90662 words of memory out of 5000000
+ 5444 multiletter control sequences out of 15000+600000
+ 8848 words of font info for 31 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  37i,8n,23p,1801b,268s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
@@ -570,11 +609,12 @@ ic/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (16 pages, 8384571 bytes).
+pe1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015basic/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on main.pdf (19 pages, 8538342 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
+ 177 PDF objects out of 1000 (max. 8388607)
+ 98 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
