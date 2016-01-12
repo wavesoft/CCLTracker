@@ -97,7 +97,7 @@ The second type of limitations refer to functional limitations. Most of existing
 
 One of the major limitations comes when we want to measure engagement or measuring some kind of user activity in our website. Information provided by GA regarding engagement is very poor, e.g. time per session, bounce rate, or pages views. For example an on-line shop would like to know about those people who buy, or those who leave the site without buying. In a citizen science project~\footnote{http://crowdcrafting.org/} it would be interesting who are the people contributing and who are those who visit the site but there are not participating, who are posting information on the forum, or who are playing a key role on the project. To get this data we need to use application specific events, i.e. events monitoring user activity on the web. In this case, developers need to implement it and release a new version of the site. Some times, specially in big companies, this new analytics requirements need to wait for the approval and the next official release. In order to mitigate this delay and make data scientist more independent from web developers, google released Google Tag Manager\footnote{http://www.google.com/tagmanager/} (GTM). GTM allows to add new tags (tracking new events) by using a graphical interface, and inject the code in the website without need to wait for developers to release the code. There many others tools and service that can be user to overcome limitations and extend GA functionality. That makes GA not a simply tool, but an eco-system of developers, tools, services, and users.
 
-This paper aims to mitigate the complexity of adding application specific events (i.e. tracking events) and decouple the dependency with Google Analytics or any other tracking tool, allowing to migrate to other tracking tools or having the tracking data replicated in a local server. Many companies are using google analytics and integrated tags in their tracking code, i.e. where user click, when they manage to sell a product, user profiling, or tracking user attention, however, that involves a huge developing effort, and once it is implemented the tracking code will be coupled to the analytics tool. For example, if we are using GA and we reach the data limit we will find to option: pay for a premium account or send fewer hits to GA. Migrating to another analytics tools such as Piwik or storing the data in a local server will involve a huge developing effort. Additionally, as far as we know there is not any library focusing on mitigating this effort, by providing a high level API to ease the implementation of application specific events. 
+This paper describes how to mitigate the complexity of adding application specific events (i.e. tracking events) and decouple the dependency with Google Analytics or any other tracking tool, allowing to migrate to other tracking tools or having the tracking data replicated in a local server. Many companies are using google analytics and integrated tags in their tracking code, i.e. where user click, when they manage to sell a product, user profiling, or tracking user attention, however, that involves a huge developing effort, and once it is implemented the tracking code will be coupled to the analytics tool. For example, if we are using GA and we reach the data limit we will find to option: pay for a premium account or send fewer hits to GA. Migrating to another analytics tools such as Piwik or storing the data in a local server will involve a huge developing effort. Additionally, as far as we know there is not any library focusing on mitigating this effort, by providing a high level API to ease the implementation of application specific events. 
 
 
 % I am not sure if we should mention the problem of advance segmentation. 
@@ -122,17 +122,12 @@ Increasingly, more citizen science projects announce clearly that they have educ
  According to this work, we can distinguish different types of analytics: demographic, engagement, learning, creativity and collaboration. As mentioned before Google Analytics allows for gathering the demographic analytics in addition to analytics related to the behavior of the participants but from an ecommerce lense, where the sole target is to track user actions on the website that lead to transactions. As we are interested in understanding how the participants learn, we need to track their behavior with a different lense and this is where the CCLtracker library reveals its usefulness.
 
 To assess the learning of a given participant, we need data about meaningful tasks  he starts, completes or interrupts, the time he spents on every task. The engagement of the participants is also an important aspect that is frequently explored in  citizen science research \cite{EngProf}\cite{VolunteerEng}. As learning is correlated to engagement, we mainly need to track how long a participant stays connected to the website, how often he gets back to it, and during which period of time. Also, it is important to know quantitatively how much the participant contributes to the project. O'brien and Toms \cite{EngConcep} proposed in 2008 a convenient conceptual farmework to charcterize user engagement with technology-based applications. An extension of this framework is proposed in \cite{LAFW} and the CCLtracker library generates the needed analytics that allows to compute both the learning and engagement indicators.
- 
-\section{CCLTracker JS library (IOANNIS}
 
-\begin{itemize}
-\item What is CCLTracker JS library?
-\item What is the contribution of using CCLTraker library compared with starting a implementation from scratch. 
-\item Technical description of the Library
-\item Setting up the library, requirements, scope,...
+%%%%% 
+\section{CCLTracker JS library}\label{sec:CCLtrackerJSLibrary}
+\include{section03-ioannis}
 
-\end{itemize}
-
+%%%%% 
 
 \section{CCLTracker Framework}\label{sec:CCLtrackerFramerwork}
 
